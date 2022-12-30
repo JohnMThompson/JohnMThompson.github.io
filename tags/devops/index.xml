@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on John Thompson</title>
-    <link>https://johnmthompson.github.io/</link>
-    <description>Recent content in Home on John Thompson</description>
+    <title>DevOps on John Thompson</title>
+    <link>https://johnmthompson.github.io/tags/devops/</link>
+    <description>Recent content in DevOps on John Thompson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://johnmthompson.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Dec 2022 20:55:00 -0600</lastBuildDate><atom:link href="https://johnmthompson.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Year in Review - 2022</title>
       <link>https://johnmthompson.github.io/posts/year-in-review-2022/</link>
@@ -16,28 +16,6 @@
       
         <description>I made a decision last January to step outside my comfort zone of proprietary low-code tools and start exploring open source projects and tools.
 I wanted to challenge myself to learn the skills I would need to be self-sufficient owning, using, and deploying analytic tools that fit the projects I wanted to complete. This meant using inexpensive or free frameworks. In order to build the skills I would need, and I planned out experiences that would allow me to learn through hands-on and realistic projects.</description>
-      
-    </item>
-    
-    <item>
-      <title>Contact Me</title>
-      <link>https://johnmthompson.github.io/contact/</link>
-      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://johnmthompson.github.io/contact/</guid>
-      
-        <description>Contact Page</description>
-      
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://johnmthompson.github.io/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://johnmthompson.github.io/about/</guid>
-      
-        <description>Hugo, the world&#39;s fastest framework for building websites</description>
       
     </item>
     
