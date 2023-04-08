@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnmthompson.github.io/posts/comfortable-being-uncomfortable/</loc>
+    <lastmod>2023-04-08T14:17:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/data-habits/</loc>
+    <lastmod>2023-04-08T14:17:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/development/</loc>
+    <lastmod>2023-04-08T14:17:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/posts/</loc>
+    <lastmod>2023-04-08T14:17:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/skills/</loc>
+    <lastmod>2023-04-08T14:17:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/</loc>
+    <lastmod>2023-04-08T14:17:00-05:00</lastmod>
+  </url><url>
     <loc>https://johnmthompson.github.io/tags/devops/</loc>
     <lastmod>2022-12-29T20:55:00-06:00</lastmod>
   </url><url>
@@ -15,12 +33,6 @@
     <lastmod>2022-12-29T20:55:00-06:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/tags/open-source/</loc>
-    <lastmod>2022-12-29T20:55:00-06:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/posts/</loc>
-    <lastmod>2022-12-29T20:55:00-06:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/tags/</loc>
     <lastmod>2022-12-29T20:55:00-06:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/tags/alteryx/</loc>
