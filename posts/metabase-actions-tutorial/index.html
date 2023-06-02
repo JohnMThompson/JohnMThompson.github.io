@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    John Thompson
+        |
+        Build a Workout Tracking App using Metabase Actions
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.112.6"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="John Thompson" />
+  <meta
+    name="description"
+    content="Exploring analytics, product, and data"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.c1d209ef4a61c52fc5115c0b907a0133117abd108123d37d478f8a89581dcae6.css"
+      integrity="sha256-wdIJ70phxS/FEVwLkHoBMxF6vRCBI9N9R4&#43;KiVgdyuY="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://johnmthompson.github.io/posts/metabase-actions-tutorial/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Build a Workout Tracking App using Metabase Actions"/>
+<meta name="twitter:description" content="Overview I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!
+This tutorial will show how to build an app to track swimming workouts using Metabase&rsquo;s new Actions feature. For some general background on Actions, check out my corresponding post to this tutorial.
+Assumptions &amp; Prerequisites Here&rsquo;s what you need to build a dashboard Actions:
+Metabase version 0."/>
+
+
+
+  
+  <meta property="og:title" content="Build a Workout Tracking App using Metabase Actions" />
+<meta property="og:description" content="Overview I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!
+This tutorial will show how to build an app to track swimming workouts using Metabase&rsquo;s new Actions feature. For some general background on Actions, check out my corresponding post to this tutorial.
+Assumptions &amp; Prerequisites Here&rsquo;s what you need to build a dashboard Actions:
+Metabase version 0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://johnmthompson.github.io/posts/metabase-actions-tutorial/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-02T10:00:00-05:00" />
+<meta property="article:modified_time" content="2023-05-02T10:00:00-05:00" /><meta property="og:site_name" content="John Thompson" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Build a Workout Tracking App using Metabase Actions",
+        "headline": "Build a Workout Tracking App using Metabase Actions",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Overview I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!\nThis tutorial will show how to build an app to track swimming workouts using Metabase\u0026rsquo;s new Actions feature. For some general background on Actions, check out my corresponding post to this tutorial.\nAssumptions \u0026amp; Prerequisites Here\u0026rsquo;s what you need to build a dashboard Actions:\nMetabase version 0.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/johnmthompson.github.io\/posts\/metabase-actions-tutorial\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-05-02T10:00:00.00Z",
+        "datePublished": "2023-05-02T10:00:00.00Z",
+        "dateModified": "2023-05-02T10:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "John Thompson",
+            "url": "https://johnmthompson.github.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/johnmthompson.github.iofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/johnmthompson.github.io\/posts\/metabase-actions-tutorial\/",
+        "wordCount" : "2535",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "MySQL"
+
+    
+      
+        ,
+
+      
+      "Metabase"
+
+    
+      
+        ,
+
+      
+      "Self-Service Analytics"
+
+    
+      
+        ,
+
+      
+      "Tutorials"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/jt.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">John Thompson</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Exploring analytics, product, and data</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/johnmthomp/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JohnMThompson"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Github"
+            title="Github"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://data-folks.masto.host/@john"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Mastodon"
+            title="Mastodon"
+          >
+            <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/JohnMThom"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Twitter"
+            title="Twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        John Thompson
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCK6LCZPLD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-PCK6LCZPLD');
+</script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About Me</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/tags/"
+              
+              title=""
+              >Tags</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Build a Workout Tracking App Using Metabase Actions</h1>
+      <h3>Table of Contents</h3>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#assumptions--prerequisites">Assumptions &amp; Prerequisites</a></li>
+    <li><a href="#database-preparation">Database Preparation</a>
+      <ul>
+        <li><a href="#create-an-empty-table">Create an Empty Table</a></li>
+        <li><a href="#add-a-record-to-the-table">Add a Record to the Table</a></li>
+        <li><a href="#add-a-user">Add a User</a></li>
+      </ul>
+    </li>
+    <li><a href="#metabase-setup">Metabase Setup</a>
+      <ul>
+        <li><a href="#configure-database-connection">Configure Database Connection</a></li>
+        <li><a href="#create-a-model">Create a Model</a></li>
+        <li><a href="#create-basic-actions">Create Basic Actions</a></li>
+      </ul>
+    </li>
+    <li><a href="#building-the-dashboard">Building the Dashboard</a>
+      <ul>
+        <li><a href="#create-a-question">Create a Question</a></li>
+        <li><a href="#add-the-question-to-a-dashboard">Add the Question to a Dashboard</a></li>
+        <li><a href="#add-create-action-button">Add &ldquo;Create&rdquo; Action Button</a></li>
+        <li><a href="#set-up-a-dashboard-filter">Set up a Dashboard Filter</a></li>
+        <li><a href="#add-update-button">Add Update Button</a></li>
+        <li><a href="#add-delete-button">Add Delete Button</a></li>
+        <li><a href="#dashboard-cleanup-and-enrichment-with-other-questions">Dashboard Cleanup and Enrichment with other Questions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<h2 id="overview">Overview</h2>
+<p>I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!</p>
+<p><img src="/images/posts/metabase-actions/metabase-swim-app.png" alt="Screenshot of my swimming app"></p>
+<p>This tutorial will show how to build an app to track swimming workouts using Metabase&rsquo;s new Actions feature. For some general background on Actions, check out <a href="/posts/metabase-actions/">my corresponding post to this tutorial</a>.</p>
+<h2 id="assumptions--prerequisites">Assumptions &amp; Prerequisites</h2>
+<p>Here&rsquo;s what you need to build a dashboard Actions:</p>
+<ul>
+<li>Metabase version 0.46 or later</li>
+<li>A database to store data (MySQL, PostgreSQL, or H2)</li>
+</ul>
+<p>This tutorial won&rsquo;t go over setting up your Metabase instance. Metabase has <a href="https://www.metabase.com/learn/getting-started/getting-started">great documentation</a> on getting started. I also already have my database up and running, so I won&rsquo;t cover that either. For this tutorial I&rsquo;m using MySQL, but Actions will also work with H2 and PostgeSQL databases as well!</p>
+<h2 id="database-preparation">Database Preparation</h2>
+<p>Let&rsquo;s start by going to our database and creating a table to hold the data for this project. All the SQL examples are written in syntax for MySQL.</p>
+<h3 id="create-an-empty-table">Create an Empty Table</h3>
+<p>The first step is to create an empty table so we store the data for each workout as an individual record.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> swim_tracking_metabase (
+</span></span><span style="display:flex;"><span>    id INT AUTO_INCREMENT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    start_date_time <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    duration INT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">location</span> VARCHAR(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    distance INT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    comments TEXT
+</span></span><span style="display:flex;"><span>    );
+</span></span></code></pre></div><h3 id="add-a-record-to-the-table">Add a Record to the Table</h3>
+<p>Creating the Basic Actions in Metabase works best with some data in the database to help with metadata, so let&rsquo;s add a dummy record to the table. We&rsquo;ll use Actions later to delete this record from the database.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> swim_tracking_metabase (
+</span></span><span style="display:flex;"><span>    start_date_time,
+</span></span><span style="display:flex;"><span>    duration,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">location</span>,
+</span></span><span style="display:flex;"><span>    distance,
+</span></span><span style="display:flex;"><span>    comments
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CURRENT_TIMESTAMP</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">45</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;YMCA&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1500</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Great Swim!&#34;</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span></code></pre></div><h3 id="add-a-user">Add a User</h3>
+<p>Next, I would normally create a new user in the MySQL database to use in Metabase, but I already have a user added for my <code>demo</code> database so I&rsquo;m going to skip that step. Metabase will need a username and password to connect to your database, and I recommend creating a dedicated user that has Read, Update, and Delete privileges.</p>
+<h2 id="metabase-setup">Metabase Setup</h2>
+<h3 id="configure-database-connection">Configure Database Connection</h3>
+<p>Once the database, table, and user are ready we can fire up Metabase and start configuring the database connection.</p>
+<p>You will need admin permissions in your Metabase instance to create the database connection.</p>
+<p>Open the Admin Settings and Databases tab, then add a new database. Your configuration will be specific to the flavor of database you are using, but one option that is key to making Actions work is to toggle &ldquo;Model Actions&rdquo; on.</p>
+<p><img src="/images/posts/metabase-actions/metabase-model-actions.png" alt="Metabase model actions setting"></p>
+<h3 id="create-a-model">Create a Model</h3>
+<p>Now that our database is ready to go, we need to create a Model. A Model is a layer that creates a curated dataset for users to create a visual, create a Question, or write a query against the Model. Models can combine many tables into a singular dataset, in this case we are going to create our Model from a single table.</p>
+<p>On the main page of Metabase, create a Model by selecting the <code>New</code> dialogue and choosing <code>Model</code>.</p>
+<p><img src="/images/posts/metabase-actions/metabase-create-model.png" alt="Metabase new model"></p>
+<p>We will be using the <code>Notebook Editor</code> on the next screen. This lets us make Actions without using SQL, instead Metabase will generate the SQL for us. If you&rsquo;re more comfortable with SQL you can use the <code>Native Query</code> editor option to build more advanced Actions.</p>
+<p><img src="/images/posts/metabase-actions/metabase-model-editor.png" alt="Metabase model editor selection"></p>
+<p>For our starting data, we will be using <code>Raw Data</code> since we are going to be working with a table that is in our database. Navigate through your database schema to find the table we created earlier called <code>Swim Tracking Metabase</code>. Notice that Metabase already made our table name more human readable by enforcing title case and swapping the underscores for spaces (<code>swim_tracking_metabase</code> -&gt; <code>Swim Tracking Metabase</code>)!</p>
+<p>In the Model Query editor, we can add filters, aggregations, or joins with other data. In our case, our Model is going to be a copy of the underlying table, so we won&rsquo;t make any changes here. Click the run button to preview the data and you should see the record we added during our database setup. Click <code>Save</code> to save the query and create the Model.</p>
+<p><img src="/images/posts/metabase-actions/metabase-model-query-creation.png" alt="Metabase model query editor"></p>
+<p>Give the Model a clever name &amp; description like <code>Swim Tracking Metabase Model</code> &amp; <code>A data model of swimming workouts I've done!</code>, and select which Collection you want to save the Model in. Collections are like folders that contain the assets for a particular project.</p>
+<p><img src="/images/posts/metabase-actions/metabase-save-model.png" alt="Metabase model save model"></p>
+<p>Now that your Model is created, a step that is optional, but I encourage doing, is completing the metadata. Click the <code>...</code> for Model options and select <code>Edit metadata</code>.</p>
+<p><img src="/images/posts/metabase-actions/metabase-metadata-menu.png" alt="Metabase metadata menu"></p>
+<p>In this screen you can go column by column and define the metadata for your fields. This can help Metabase to build better Questions, and is a best practice, even though it isn&rsquo;t strictly necessary for this Actions project. Here&rsquo;s more info on <a href="https://www.metabase.com/docs/latest/data-modeling/metadata-editing">curating your metadata in Metabase Models</a>.</p>
+<p><img src="/images/posts/metabase-actions/metabase-metadata-complete.png" alt="Metabase complete metadata curation"></p>
+<h3 id="create-basic-actions">Create Basic Actions</h3>
+<p>Now that our Model is created and curated, we can have Metabase create our Actions! In the Model screen, open the <code>Model Details</code> through the <code>About</code> menu by clicking the icon of an <code>i</code> in a circle.</p>
+<p><img src="/images/posts/metabase-actions/metabase-model-details-menu.png" alt="Metabase model details menu"></p>
+<p>Once in the Model Details menu, navigate to the Actions tab and click the <code>Create basic actions</code> button in the middle of the screen. This will have Metabase automatically create 3 actions to <code>Create</code>, <code>Update</code>, and <code>Delete</code> records from your database. Note that even though we created this based on a data Model, the actions will add/update/delete records from the underlying database table.</p>
+<p><img src="/images/posts/metabase-actions/metabase-create-basic-actions.png" alt="Metabase create basic actions"></p>
+<p>That&rsquo;s all for the setup, now we can get to creating our Questions and the dashboard users will interact with!</p>
+<h2 id="building-the-dashboard">Building the Dashboard</h2>
+<h3 id="create-a-question">Create a Question</h3>
+<p>Our first step to creating an interactive dashboard with Actions is to create a Question. Questions in Metabase are the individual charts and tables that you can add to a dashboard. Go to the <code>New</code> button in the top right corner of Metabase and select <code>Question</code>. The steps to create a Question will seem familiar, they are similar to the steps we did earlier to create a Model. This time for our starting data, we will use our <code>Swim Tracking Metabase Model</code> Model we made earlier.</p>
+<p><img src="/images/posts/metabase-actions/metabase-question-starting-data.png" alt="Metabase question starting data"></p>
+<p>The Question we want to build is a table of all the records in our Model, sorted by most recent date. We won&rsquo;t add any Filters since we want all the data, and we won&rsquo;t summarize any of the data since we want each record to come in. We will add a Sort on Start Date Time and make is descending to show the most recent record at the top of the table. Clicking the <code>play</code> button next to the Sort dialogue will give you a preview of the data.</p>
+<p><img src="/images/posts/metabase-actions/metabase-question-configuration.png" alt="Metabase question data preview"></p>
+<p>If the preview looks good, click the <code>Visualize</code> button to start working with a visual of the data. In this case, we won&rsquo;t change anything since we want a table showing each record. We will add some more Questions later that summarize our data into charts. Click <code>Save</code> in the upper right and name the visual <code>Workout Details</code> and add a description like <code>A list of each workout with comments</code>.</p>
+<p><img src="/images/posts/metabase-actions/metabase-question-save.png" alt="Metabase question save dialog"></p>
+<h3 id="add-the-question-to-a-dashboard">Add the Question to a Dashboard</h3>
+<p>Once you save the Question, Metabase will ask if you want to add it to a Dashboard. Let&rsquo;s do that and add it to a new dashboard by selecting the <code>Create a new dashboard</code> option.</p>
+<p><img src="/images/posts/metabase-actions/metabase-question-add-to-dashboard.png" alt="Metabase add question to dashboard"></p>
+<p>Give the dashboard a lovely name like <code>Swim Workout Dashboard</code> and a description <code>Dashboard for tracking workout progress and modifying workouts</code></p>
+<p><img src="/images/posts/metabase-actions/metabase-dashboard-create.png" alt="Metabase create dashboard"></p>
+<p>This should take you to the Dashboard editing screen with the Question we created earlier added as a table.</p>
+<p>Metabase makes formatting a dashboard fairly easy by offering a grid where we can resize and move Questions around. It won&rsquo;t give pixel-perfect precision like some other BI tools, but I think the ease of moving elements around and makes the trade off worth it.</p>
+<p>Let&rsquo;s resize the <code>Workout Details</code> Question so it&rsquo;s 9 squares wide and 4 tall.</p>
+<p><img src="/images/posts/metabase-actions/metabase-dashboard-layout-1.png" alt="Metabase resize question"></p>
+<h3 id="add-create-action-button">Add &ldquo;Create&rdquo; Action Button</h3>
+<p>It&rsquo;s finally time to make our Actions come to life on the Dashboard! To add an Action, click the <code>Add action button</code> icon in the top right of the dashboard editing window.</p>
+<p><img src="/images/posts/metabase-actions/metabase-add-action-button.png" alt="Metabase add action button"></p>
+<p>A button has been added to your dashboard and a <code>Button properties</code> dialogue has opened on the right sidebar! We&rsquo;ll use this dialogue to configure our button and choose which Action it will execute.</p>
+<p><img src="/images/posts/metabase-actions/metabase-button-properties.png" alt="Metabase button properties"></p>
+<p>This button is going to use the <code>Create</code> Action to add a new record to our database.</p>
+<p>Let&rsquo;s start by entering an engaging and descriptive <code>Button text</code> like &ldquo;Add Workout&rdquo;. The <code>Button variant</code> dropdown menu will set the appearance of the button:</p>
+<p><img src="/images/posts/metabase-actions/metabase-button-variants.png" alt="Metabase button variants"></p>
+<p>Let&rsquo;s leave it as a <code>Primary</code> variant, we can come back and change this later if we want.</p>
+<p>Next, we need to pick an Action by clicking the <code>Pick an action</code> button. This will open the <code>Action Library</code> where you can search for Actions we&rsquo;ve created. These are arranged by Model, so let&rsquo;s find the Actions associated with the <code>Swim Tracking Metabase Model</code> Model. Once you find the Model, expand the menu and it will show the 3 basic Actions we created.</p>
+<p><img src="/images/posts/metabase-actions/metabase-action-library.png" alt="Metabase action library"></p>
+<p>Select <code>Create</code> and leave the values for <code>Where should the values for 'Create' come from?</code> as their default &ldquo;Ask the user&rdquo;. By using this option, Metabase will create a form for the user to fill out when they click the button to add a workout.</p>
+<p><img src="/images/posts/metabase-actions/metabase-create-action.png" alt="Metabase create action setup"></p>
+<p>We should have our button all set up now! To test that it works, Save the dashboard by using the <code>Save</code> button in the upper right corner. This will take us out of edit mode and into view mode. Click the new button and it should open a form asking you to fill in the data for a new workout! The form is created based on the fields in our Model and their metadata.</p>
+<p>Fill out the form with some data and when click save&hellip;</p>
+<p><img src="/images/posts/metabase-actions/metabase-create-action-form.png" alt="Metabase action form"></p>
+<p>it should show on our <code>Workout Details</code> Question and&hellip;</p>
+<p><img src="/images/posts/metabase-actions/metabase-question-updated.png" alt="Metabase question updated"></p>
+<p>if we query the database directly, the record has been written to the table there as well!</p>
+<p><img src="/images/posts/metabase-actions/metabase-added-to-database.png" alt="Metabase database updated"></p>
+<h3 id="set-up-a-dashboard-filter">Set up a Dashboard Filter</h3>
+<p>Now that we are able to create new records, let&rsquo;s create a button to update an existing record!</p>
+<p>First, we need to add a filter to our dashboard. This will allow us to select a particular record we want to update. Back in edit mode on our Dashboard, click the <code>Add a filter</code> button on the upper right and select <code>ID</code> in the <code>What do you want to filter</code> dialogue.</p>
+<p><img src="/images/posts/metabase-actions/metabase-add-filter.png" alt="Metabase add filter"></p>
+<p>In the filter settings menu, we can leave the <code>Label</code> as <code>ID</code> with no <code>Default value</code> and change the <code>Users can pick</code> to <code>A single value</code>. This will prevent users from trying to update multiple records at a time, which won&rsquo;t allow the Action to function.</p>
+<p>On the <code>Workout Details</code> Question, link the filter by selecting <code>ID</code> in the <code>Column to filter on</code> dialogue. This will link the filter to the Question. Click <code>Done</code> to save the Filter.</p>
+<p><img src="/images/posts/metabase-actions/metabase-filter-configuration.png" alt="Metabase configure filter"></p>
+<p>Now we have a Filter added to the top of our dashboard! We&rsquo;re going to do one more change to allow us to click directly on a record in the <code>Workout Details</code> Question to choose a record. We can do this by hovering over the <code>Workout Details</code> Question and choosing the <code>Click behavior</code> option.</p>
+<p><img src="/images/posts/metabase-actions/metabase-click-behavior-option.png" alt="Metabase click options"></p>
+<p>By default, Metabase&rsquo;s &ldquo;on-click&rdquo; action is to provide a drill down. We want to change this for the <code>ID</code> field. In the configuration dialogue that opens, click <code>ID</code> to set the click behavior for the <code>ID</code> field and change it to <code>Update a dashboard filter</code>.</p>
+<p><img src="/images/posts/metabase-actions/metabase-update-dashboard-filter.png" alt="Metabase Update dashboard filter"></p>
+<p>Select the <code>ID</code> filter from the <code>Available filters</code> menu and then select the <code>ID</code> field to link the filter to the field. Click <code>Done</code> to save your click behavior.</p>
+<p><img src="/images/posts/metabase-actions/metabase-click-behavior-id.png" alt="Metabase link click behavior"></p>
+<p>Try out the click behavior by saving the Dashboard, and selecting the record with <code>ID</code> = 1 and the dashboard filter should activate, displaying <code>1</code> for the value. Clear the filter by using the on click behavior again on the Question or by clearing the filter value on the top of the dashboard.</p>
+<p><img src="/images/posts/metabase-actions/metabase-filter-success.png" alt="Metabase filter works great"></p>
+<h3 id="add-update-button">Add Update Button</h3>
+<p>Like we did for the <code>Create</code> button, we&rsquo;re going to start by clicking the <code>Add action button</code> icon on the upper right of the edit dashboard screen. This time, let&rsquo;s give our button the text <code>Update Workout</code>, leave the variant as <code>Primary</code>, and find the <code>Update</code> Action we created for our Model. When configuring the Action, instead of leaving all the fields as <code>Ask the user</code>, we want to change the <code>id</code> field to <code>ID</code>. This will link that field to the filter we created and allow us to make changes to a specific record.</p>
+<p><img src="/images/posts/metabase-actions/metabase-update-action.png" alt="Metabase update action"></p>
+<p>Click <code>Done</code> then <code>Close</code>, and our new <code>Update Workout</code> button should be visible on the dashboard! Save the dashboard and try this button out!</p>
+<p>Be sure to select a record before clicking the button so the Action knows which record we want to update. Try updating the <code>Distance</code> field for the record we added (<code>ID = 2</code>) from <code>1000</code> to <code>2000</code>.</p>
+<p><img src="/images/posts/metabase-actions/metabase-dashboard-update-record.png" alt="Metabase updated record"></p>
+<p>Click <code>Update</code> and the record will be updated in the Question and in your database table!</p>
+<p><img src="/images/posts/metabase-actions/metabase-record-updated.png" alt="Metabase updated record">
+<img src="/images/posts/metabase-actions/metabase-record-updated-db.png" alt="Metabase updated record in database"></p>
+<h3 id="add-delete-button">Add Delete Button</h3>
+<p>Before we get to configuring the Delete button, a brief word of caution!</p>
+<p><strong>This is an Action to be very careful with since it will completely delete records from the database. Remember, this isn&rsquo;t just a chart being filtered or changed, the Action removes a record from the database permanently. Use this Action with care!</strong></p>
+<p>Adding the Delete button is the same process as the Update button, except we will choose the <code>Danger</code> <code>Button variant</code> and the Action will be our <code>Delete</code> Action.</p>
+<p>Like with the Update button, we will link the <code>id</code> field to the <code>ID</code> filter.</p>
+<p><img src="/images/posts/metabase-actions/metabase-delete-button-config.png" alt="Metabase delete record button config"></p>
+<p>Once we complete the setup, there should be a red button added to the dashboard. Let&rsquo;s delete record <code>2</code>, which we added and updated earlier as part of this tutorial. Select it on the table to filter the dashboard, then click the <code>Delete Workout</code> button. Metabase will give a warning explaining that this Action can&rsquo;t be undone, so again use care with this Action!</p>
+<p><img src="/images/posts/metabase-actions/metabase-delete-warning.png" alt="Metabase delete record warning"></p>
+<p>Click <code>Delete</code> and the record will be removed from the dashboard and database!</p>
+<p><img src="/images/posts/metabase-actions/metabase-record-deleted.png" alt="Metabase deleted record">
+<img src="/images/posts/metabase-actions/metabase-record-deleted-db.png" alt="Metabase deleted in database"></p>
+<h3 id="dashboard-cleanup-and-enrichment-with-other-questions">Dashboard Cleanup and Enrichment with other Questions</h3>
+<p>With that we are done with our Actions and dashboard! All of our functionality has been added, but the dashboard could use some more visual elements. At a minimum, let&rsquo;s move the buttons to the top of the dashboard. This is simple to do in the dashboard&rsquo;s edit mode, just drag the buttons to where they need to be. Let&rsquo;s also make each button 3 units wide, to match the total width of our table Question.</p>
+<p><img src="/images/posts/metabase-actions/metabase-move-buttons.png" alt="Metabase move buttons"></p>
+<p>This is a perfectly usable layout for data entry, feel free to add more Questions to your dashboard. Metabase has many options that are simple to add. I&rsquo;ve added a few extra workouts in the below example to better show the visuals, feel free to experiment with different Questions and chart types to show trends in your data!</p>
+<p><img src="/images/posts/metabase-actions/metabase-final-dashboard.png" alt="Metabase final dashboard"></p>
+<hr>
+<p><em>Thanks for reading! I&rsquo;ve made a goal to write 12 posts in 2023 to improve my writing and help crystallize my thoughts on topics relating to data, analytics, and product. Check back for the next one soon!</em></p>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/mysql/">MySQL</a><a class="tag" href="/tags/metabase/">Metabase</a><a class="tag" href="/tags/self-service-analytics/">Self-Service Analytics</a><a class="tag" href="/tags/tutorials/">Tutorials</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        John Thompson
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCK6LCZPLD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-PCK6LCZPLD');
+</script>
+</body>
+</html>
