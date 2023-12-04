@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnmthompson.github.io/about/resume/</loc>
+    <lastmod>2023-12-04T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/about/</loc>
+    <lastmod>2023-12-04T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/about/bio/</loc>
+    <lastmod>2023-12-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://johnmthompson.github.io/posts/metabase-actions-tutorial/</loc>
     <lastmod>2023-05-02T10:00:00-05:00</lastmod>
   </url><url>
@@ -61,9 +70,6 @@
   </url><url>
     <loc>https://johnmthompson.github.io/speaking/</loc>
     <lastmod>2022-12-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/categories/</loc>
   </url><url>
