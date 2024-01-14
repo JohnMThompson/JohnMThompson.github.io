@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnmthompson.github.io/posts/</loc>
+    <lastmod>2024-01-11T14:27:24-06:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/posts/year-in-review-2023/</loc>
+    <lastmod>2024-01-11T14:27:24-06:00</lastmod>
+  </url><url>
     <loc>https://johnmthompson.github.io/posts/metabase-actions-tutorial/</loc>
     <lastmod>2023-05-02T10:00:00-05:00</lastmod>
   </url><url>
@@ -9,9 +15,6 @@
     <lastmod>2023-05-02T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/tags/mysql/</loc>
-    <lastmod>2023-05-02T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/posts/</loc>
     <lastmod>2023-05-02T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/tags/self-service-analytics/</loc>
