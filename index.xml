@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://johnmthompson.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Scraping Mortgage Rates Using Python &amp; Metabase</title>
+      <link>https://johnmthompson.github.io/posts/mortgage-scraper/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 -0500</pubDate>
+      
+      <guid>https://johnmthompson.github.io/posts/mortgage-scraper/</guid>
+      
+        <description>My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve found myself looking at rates from local lenders every daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.</description>
+      
+    </item>
+    
+    <item>
       <title>Year in Review - 2023</title>
       <link>https://johnmthompson.github.io/posts/year-in-review-2023/</link>
       <pubDate>Thu, 11 Jan 2024 14:27:24 -0600</pubDate>

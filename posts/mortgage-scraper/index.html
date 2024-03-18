@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    John Thompson
+        |
+        Scraping Mortgage Rates Using Python &amp; Metabase
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.124.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="John Thompson" />
+  <meta
+    name="description"
+    content="Exploring analytics, product, and data"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.961baad6f5861e8d493bdb6ae3eb901c126f08e7c9910f6e8a029a42a85ece81.css"
+      integrity="sha256-lhuq1vWGHo1JO9tq4&#43;uQHBJvCOfJkQ9uigKaQqhezoE="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://johnmthompson.github.io/posts/mortgage-scraper/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Scraping Mortgage Rates Using Python &amp; Metabase"/>
+<meta name="twitter:description" content="My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&rsquo;ve found myself looking at rates from local lenders every daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months."/>
+
+
+
+  
+  <meta property="og:title" content="Scraping Mortgage Rates Using Python &amp; Metabase" />
+<meta property="og:description" content="My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&rsquo;ve found myself looking at rates from local lenders every daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://johnmthompson.github.io/posts/mortgage-scraper/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-17T00:00:00-05:00" />
+<meta property="article:modified_time" content="2024-03-17T00:00:00-05:00" /><meta property="og:site_name" content="John Thompson" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Scraping Mortgage Rates Using Python \u0026 Metabase",
+        "headline": "Scraping Mortgage Rates Using Python \u0026 Metabase",
+        "alternativeHeadline": "",
+        "description": "
+      
+        My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I\u0026rsquo;ve found myself looking at rates from local lenders every daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It\u0026rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/johnmthompson.github.io\/posts\/mortgage-scraper\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-03-17T00:00:00.00Z",
+        "datePublished": "2024-03-17T00:00:00.00Z",
+        "dateModified": "2024-03-17T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "John Thompson",
+            "url": "https://johnmthompson.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/johnmthompson.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/johnmthompson.github.io\/posts\/mortgage-scraper\/",
+        "wordCount" : "1127",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "Python"
+
+    
+      
+        ,
+
+      
+      "Metabase"
+
+    
+      
+        ,
+
+      
+      "cron"
+
+    
+      
+        ,
+
+      
+      "linux"
+
+    
+      
+        ,
+
+      
+      "MySQL"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/jt.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">John Thompson</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Exploring analytics, product, and data</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/johnmthomp/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JohnMThompson"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Github"
+            title="Github"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        John Thompson
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCK6LCZPLD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-PCK6LCZPLD');
+</script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/resume/"
+              
+              title=""
+              >Resume</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/speaking/"
+              
+              title=""
+              >Speaking</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Scraping Mortgage Rates Using Python &amp; Metabase</h1>
+      <p>My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&rsquo;ve found myself looking at rates from local lenders every daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.</p>
+<p>I like to outline the general steps I need to take before I start building anything. This keeps the code from getting in the way of the goals and let&rsquo;s me think through the process and goals rather than tackling the first step in isolation.</p>
+<p>Here&rsquo;s what I needed to do:</p>
+<ol>
+<li>Retrieve &amp; parse data from the lender&rsquo;s website</li>
+<li>Write the data to a database</li>
+<li>Schedule the program to run daily</li>
+<li>Create a front end to view the rates</li>
+</ol>
+<h2 id="retrieving--parsing-the-rates">Retrieving &amp; Parsing the Rates</h2>
+<p>My first milestone was to find a way to retrieve the mortgage rates from the public website where my lender publishes updates daily. I needed a way to retrieve and parse HTML!</p>
+<p>I was familiar with the <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup</a> package for Python, but hadn&rsquo;t used it aside from a small project when I started learning Python. I got started quickly and was able to fetch HTML from the web, but parsing the values wasn&rsquo;t going well for me. I was trying to extract a few values from a table, and having difficulty getting a table cell&rsquo;s value from multiple tables on the webpage. My efforts were getting me the values I wanted from the first table on the page, but I wasn&rsquo;t able to extract the second table. I tried different looping approaches and using filters with a variety of keywords in my Beautiful Soup methods, but I was still only getting the first table&rsquo;s values.</p>
+<p>The approach the worked for me was to capture all the <code>td</code> values using the <code>findall()</code> method and parse the values I was after using substrings. This worked for me in the moment, but if the design of the webpage changes or the format of the table is adjusted my code may not parse the correct values from the table. I know there is a more sophisticated approach out there, and I might revisit this part of the program in the future as I learn more about Beautiful Soup and the intricacies of parsing HTML.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># Fetch mortgage rates</span>
+</span></span><span style="display:flex;"><span>URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.wingsfinancial.com/rates/mortgages-purchase&#34;</span>
+</span></span><span style="display:flex;"><span>page <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(URL)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>soup <span style="color:#f92672">=</span> BeautifulSoup(page<span style="color:#f92672">.</span>content, <span style="color:#e6db74">&#34;html.parser&#34;</span>)
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;td&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fr30 <span style="color:#f92672">=</span> float(str(table[<span style="color:#ae81ff">0</span>])[<span style="color:#ae81ff">4</span>:<span style="color:#ae81ff">9</span>])
+</span></span><span style="display:flex;"><span>fr30pt <span style="color:#f92672">=</span> float(str(table[<span style="color:#ae81ff">2</span>])[<span style="color:#ae81ff">4</span>:<span style="color:#ae81ff">6</span>])
+</span></span><span style="display:flex;"><span>ARM71 <span style="color:#f92672">=</span> float(str(table[<span style="color:#ae81ff">25</span>])[<span style="color:#ae81ff">4</span>:<span style="color:#ae81ff">9</span>])
+</span></span><span style="display:flex;"><span>ARM71pt <span style="color:#f92672">=</span> float(str(table[<span style="color:#ae81ff">7</span>])[<span style="color:#ae81ff">4</span>:<span style="color:#ae81ff">6</span>])
+</span></span></code></pre></div><h2 id="writing-to-a-database">Writing to a Database</h2>
+<p>Now that I had the values, I needed to write them to the a database. I have a MySQL database I use for hobby projects and host on the cloud, so I decided to use that existing database. Since, I had done this in a <a href="https://github.com/JohnMThompson/rpi-temperature">previous project using a Raspberry Pi to record my office temperature</a> using the <a href="https://dev.mysql.com/doc/connector-python/en/"><code>mysql.connector</code> package</a>, I was able to refresh my memory and write the rest of the code to insert the values to a table.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># Create variables</span>
+</span></span><span style="display:flex;"><span>source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wings&#34;</span>
+</span></span><span style="display:flex;"><span>ct <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Connect to database</span>
+</span></span><span style="display:flex;"><span>db <span style="color:#f92672">=</span> mysql<span style="color:#f92672">.</span>connector<span style="color:#f92672">.</span>connect(
+</span></span><span style="display:flex;"><span>    host <span style="color:#f92672">=</span> config<span style="color:#f92672">.</span>host,
+</span></span><span style="display:flex;"><span>    user <span style="color:#f92672">=</span> config<span style="color:#f92672">.</span>user,
+</span></span><span style="display:flex;"><span>    password <span style="color:#f92672">=</span> config<span style="color:#f92672">.</span>pw,
+</span></span><span style="display:flex;"><span>    database <span style="color:#f92672">=</span> config<span style="color:#f92672">.</span>db
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>cursor <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Write to database</span>
+</span></span><span style="display:flex;"><span>sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO `daily_rates` (source, timestamp, 30_year_fixed_rate, 30_year_fixed_points, 71_arm_rate,71_arm_point) VALUES (</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">,</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">,</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">,</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">,</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">,</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#34;</span>
+</span></span><span style="display:flex;"><span>val <span style="color:#f92672">=</span> (source,ct,fr30,fr30pt,ARM71,ARM71pt)
+</span></span><span style="display:flex;"><span>cursor<span style="color:#f92672">.</span>execute(sql,val)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>db<span style="color:#f92672">.</span>commit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Close database connection</span>
+</span></span><span style="display:flex;"><span>cursor<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>db<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><p>After running a few tests to confirm the program was writing the right values to the database, I committed the project to GitHub and felt pretty accomplished! All that was left was to schedule the program to run daily!</p>
+<h2 id="scheduling-with-cron">Scheduling with cron</h2>
+<p>On my Raspberry Pi temperature monitoring project, I used a never ending loop with a <code>time.sleep</code> function within the Python code to &ldquo;schedule&rdquo; a run, essentially  delaying the loop from iterating until a certain amount of time had elapsed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        temperature_c <span style="color:#f92672">=</span> dhtDevice<span style="color:#f92672">.</span>temperature
+</span></span><span style="display:flex;"><span>        temperature_f <span style="color:#f92672">=</span> temperature_c <span style="color:#f92672">*</span> (<span style="color:#ae81ff">9</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">32</span>
+</span></span><span style="display:flex;"><span>        humidity <span style="color:#f92672">=</span> dhtDevice<span style="color:#f92672">.</span>humidity
+</span></span><span style="display:flex;"><span>        ct <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>        sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO `temperature-sensor` (timestamp, room, temperature_f, humidity) VALUES (</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#34;</span>
+</span></span><span style="display:flex;"><span>        val <span style="color:#f92672">=</span> (ct, room, temperature_f, humidity)
+</span></span><span style="display:flex;"><span>        mycursor<span style="color:#f92672">.</span>execute(sql, val)
+</span></span><span style="display:flex;"><span>        db<span style="color:#f92672">.</span>commit()
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">60</span>)
+</span></span></code></pre></div><p>While this is simple in that everything is written in a single Python program, I realized this wasn&rsquo;t a good approach since my Python program never stopped running. Using some system resources and most likely frying my cheap micro-SD card over time.</p>
+<p>I didn&rsquo;t need to my code to run 24/7 when it only needs to execute once per day. The MySQL database I use is hosted on a Linux server, and I decided to use <code>cron</code> to schedule my Python program to run daily at noon central time. This was my first time using <code>cron</code> and I once I understood the syntax of the configuration file it went fairly smoothly. The <a href="https://en.wikipedia.org/wiki/Cron">cron wikipedia page</a> has a diagram that helped me most to understand the proper syntax of my job&rsquo;s configuration.</p>
+<p>After cloning my git project to the server&rsquo;s <code>/root</code> directory, I set up the <code>crontab</code> file. I wanted to run the python program Monday - Friday at noon so my entry into the <code>crontab</code> file was:</p>
+<pre tabindex="0"><code class="language-cron" data-lang="cron">0 12 * * 1-5 /usr/bin/python3 /root/mortgage-rate-scraper/script.py
+</code></pre><p>The next day I was so excited to see the results of my first run, which I was sure executed without any problems! I logged in to the MySQL database and queried my table. The records were written to the database&hellip; but they were written to MySQL at 6am instead of noon. Timezones! I hadn&rsquo;t considered that the linux server I scheduled the job on was on UTC time. A small adjustment to the <code>crontab</code> entry to account for the 6 hour offset and I was all set.</p>
+<pre tabindex="0"><code class="language-cron" data-lang="cron">0 18 * * 1-5 /usr/bin/python3 /root/mortgage-rate-scraper/script.py
+</code></pre><p>I&rsquo;m going to do some more research on handling time zones and daylight savings time adjustments when using cron so I don&rsquo;t need to keep adjusting twice per year. Overall, I am really happy with this approach, and it&rsquo;s vastly superior to my previous never ending loop method!</p>
+<h2 id="viewing-the-results">Viewing the Results</h2>
+<p>The last step in this project was to create a user facing dashboard where I could see today&rsquo;s rates and a simple trend of rates over time. For most of my personal projects, I like to use Metabase for this kind of reporting. It&rsquo;s simple to configure, lightweight, and open source. Metabase also offers an embedding option that I&rsquo;m going to try out for the first time in this post!</p>
+<iframe src="http://metabase.corvidanalytics.com/public/dashboard/8eef25a5-d8a4-4033-96e6-b828af13b025" frameborder = "0" width = "800" height="600" allowtransparency></iframe>
+<p>Here&rsquo;s a link to the <a href="https://github.com/JohnMThompson/mortgage-rate-scraper">GitHub repository for this project</a> if you want to check out the full Python code!</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/python/">Python</a><a class="tag" href="/tags/metabase/">Metabase</a><a class="tag" href="/tags/cron/">cron</a><a class="tag" href="/tags/linux/">linux</a><a class="tag" href="/tags/mysql/">MySQL</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        John Thompson
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCK6LCZPLD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-PCK6LCZPLD');
+</script>
+</body>
+</html>

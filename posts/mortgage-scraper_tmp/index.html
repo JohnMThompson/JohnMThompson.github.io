@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+    John Thompson
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.124.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="John Thompson" />
+  <meta
+    name="description"
+    content="Exploring analytics, product, and data"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.961baad6f5861e8d493bdb6ae3eb901c126f08e7c9910f6e8a029a42a85ece81.css"
+      integrity="sha256-lhuq1vWGHo1JO9tq4&#43;uQHBJvCOfJkQ9uigKaQqhezoE="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://localhost:1313/posts/mortgage-scraper_tmp/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="&lt;!DOCTYPE html&gt;mortgage-scraper.mdMy wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I found myself looking at rates from local lenders every day, navigating to websites and writing the rates down or mentally taking note of where they are at. It was difficult to see trends and understand if rates were rising or falling over time."/>
+
+
+
+  
+  <meta property="og:title" content="" />
+<meta property="og:description" content="&lt;!DOCTYPE html&gt;mortgage-scraper.mdMy wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I found myself looking at rates from local lenders every day, navigating to websites and writing the rates down or mentally taking note of where they are at. It was difficult to see trends and understand if rates were rising or falling over time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/mortgage-scraper_tmp/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="John Thompson" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "",
+        "headline": "",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003c!DOCTYPE html\u003e\rmortgage-scraper.md\rMy wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I found myself looking at rates from local lenders every day, navigating to websites and writing the rates down or mentally taking note of where they are at. It was difficult to see trends and understand if rates were rising or falling over time.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/mortgage-scraper_tmp\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "John Thompson"
+        },
+        "copyrightYear" : "0001",
+        "dateCreated": "0001-01-01T00:00:00.00Z",
+        "datePublished": "0001-01-01T00:00:00.00Z",
+        "dateModified": "0001-01-01T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "John Thompson",
+            "url": "http://localhost:1313/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/localhost:1313\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "http:\/\/localhost:1313\/posts\/mortgage-scraper_tmp\/",
+        "wordCount" : "840",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/jt.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">John Thompson</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Exploring analytics, product, and data</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/johnmthomp/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/JohnMThompson"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Github"
+            title="Github"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        John Thompson
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/resume/"
+              
+              title=""
+              >Resume</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/speaking/"
+              
+              title=""
+              >Speaking</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1></h1>
+      <!DOCTYPE html>
+<html>
+<head>
+<title>mortgage-scraper.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p>My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I found myself looking at rates from local lenders every day, navigating to websites and writing the rates down or mentally taking note of where they are at. It was difficult to see trends and understand if rates were rising or falling over time.</p>
+<p>I decided to try writing a script that would retrieve the rates from the lender website and save it for me to track. My plan was to build a short Python script that would scrape the website and save the mortgage rates in an existing MySQL database I own. Once I had the data stored there, I would create a small dashboard in Metabase to view the day's rate and simple trends over time.</p>
+<h2 id="writing-the-script">Writing the Script</h2>
+<p>I was familiar with the <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup</a> package for Python, but hadn't used it aside from a small project when I first learned Python. It was easy follow the documentation and fetch HTML from the web, but parsing the values wasn't going well for me. I was trying to extract a few values from a table, and having difficulty getting a table cell's value from multiple tables on the webpage.</p>
+<p>The approach the worked for me was to capture all the <code>td</code> values using the <code>.findall()</code> method and parse the values I was after using substrings. This worked for me in the moment, but if the design of the webpage changes or the format of the table is adjusted my script may not parse the correct values from the table. I might revisit this part of the script in the future as I learn more about Beautiful Soup and parsing HTML.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Fetch mortgage rates</span>
+URL = <span class="hljs-string">"https://www.wingsfinancial.com/rates/mortgages-purchase"</span>
+page = requests.get(URL)
+
+soup = BeautifulSoup(page.content, <span class="hljs-string">"html.parser"</span>)
+table = soup.find_all(<span class="hljs-string">'td'</span>)
+
+fr30 = float(str(table[<span class="hljs-number">0</span>])[<span class="hljs-number">4</span>:<span class="hljs-number">9</span>])
+fr30pt = float(str(table[<span class="hljs-number">2</span>])[<span class="hljs-number">4</span>:<span class="hljs-number">6</span>])
+ARM71 = float(str(table[<span class="hljs-number">25</span>])[<span class="hljs-number">4</span>:<span class="hljs-number">9</span>])
+ARM71pt = float(str(table[<span class="hljs-number">7</span>])[<span class="hljs-number">4</span>:<span class="hljs-number">6</span>])
+</div></code></pre>
+<p>Now that I had the values, I needed to write them to the MySQL database I use for hobby projects. Since, I had done this in a <a href="https://github.com/JohnMThompson/rpi-temperature">previous project</a> using the <a href="https://dev.mysql.com/doc/connector-python/en/"><code>mysql.connector</code> package</a>, I was able to quickly refresh my understanding and write the rest of the script to write the values to a table. If you want to learn more, <a href="https://dev.mysql.com/doc/connector-python/en/">MySQL has good documentation</a> and there's lots of YouTube tutorials out there.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Create variables</span>
+source = <span class="hljs-string">"Wings"</span>
+ct = datetime.datetime.now()
+
+<span class="hljs-comment"># Connect to database</span>
+db = mysql.connector.connect(
+    host = config.host,
+    user = config.user,
+    password = config.pw,
+    database = config.db
+)
+cursor = db.cursor()
+
+<span class="hljs-comment"># Write to database</span>
+sql = <span class="hljs-string">"INSERT INTO `daily_rates` (source, timestamp, 30_year_fixed_rate, 30_year_fixed_points, 71_arm_rate,71_arm_point) VALUES (%s,%s,%s,%s,%s,%s)"</span>
+val = (source,ct,fr30,fr30pt,ARM71,ARM71pt)
+cursor.execute(sql,val)
+
+db.commit()
+
+<span class="hljs-comment"># Close database connection</span>
+cursor.close()
+db.close()
+</div></code></pre>
+<p>I committed the final version of the script to GitHub and felt pretty accomplished. All that was left was to schedule the script to run daily!</p>
+<h2 id="scheduling-with-cron">Scheduling with cron</h2>
+<p>In the past, I have used a <code>time.sleep</code> function within the Python script to &quot;schedule&quot; a run, essentially only delaying a loop from running until a certain amount of time had elapsed. I realized this wasn't a good approach since my Python script never stopped running, using some system resources. I didn't need to run a script 24/7 when it only needed to execute once per day. Since the MySQL database I use is hosted on a Linux server, I decided to use <code>cron</code> to schedule my script to run on the server daily at noon central time. This was my first time using <code>cron</code> and I found lots of guides on setting up the <code>crontab</code> file. After cloning my git project to the server's <code>/root</code> directory, I set up the <code>crontab</code> file. I wanted to run the python script Monday - Friday at noon so my entry into the <code>crontab</code> file was:</p>
+<pre class="hljs"><code><div>0 12 * * 1-5 /usr/bin/python3 /root/mortgage-rate-scraper/script.py
+</div></code></pre>
+<p>I was so excited to see the results of my first run, but they were written to MySQL at 6am instead of noon. Timezones! I hadn't considered that the linux server I scheduled the job on was on UTC time. A simple adjustment to the <code>crontab</code> entry to account for the 6 hour offset and I was all set.</p>
+<pre class="hljs"><code><div>0 18 * * 1-5 /usr/bin/python3 /root/mortgage-rate-scraper/script.py
+</div></code></pre>
+<p>Recently, I learned the joys of Daylight Savings Time as my script was &quot;delayed&quot; by an hour. Another easy fix to the <code>crontab</code> file and we were back in business. Time logic is so fun!</p>
+<h2 id="viewing-the-results">Viewing the Results</h2>
+<p>The last step in this project was to create a user facing dashboard where I could see today's rates and a simple trend of rates over time. For most of my personal projects, I like to use Metabase for this kind of reporting. It's simple to configure, lightweight, and open source. Metabase also offers an embedding option that I'm going to try out for the first time in this post!</p>
+<p>{{&lt; iframe &quot;http://metabase.corvidanalytics.com/public/dashboard/8eef25a5-d8a4-4033-96e6-b828af13b025&quot; 800 600 &gt;}}</p>
+<p>Here's a link to the <a href="https://github.com/JohnMThompson/mortgage-rate-scraper">GitHub repository for this project</a></p>
+
+</body>
+</html>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        John Thompson
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

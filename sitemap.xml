@@ -2,8 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnmthompson.github.io/tags/cron/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/linux/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/metabase/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/mysql/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
     <loc>https://johnmthompson.github.io/posts/</loc>
-    <lastmod>2024-01-11T14:27:24-06:00</lastmod>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/python/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/posts/mortgage-scraper/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://johnmthompson.github.io/tags/</loc>
+    <lastmod>2024-03-17T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/posts/year-in-review-2023/</loc>
     <lastmod>2024-01-11T14:27:24-06:00</lastmod>
@@ -11,16 +32,7 @@
     <loc>https://johnmthompson.github.io/posts/metabase-actions-tutorial/</loc>
     <lastmod>2023-05-02T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://johnmthompson.github.io/tags/metabase/</loc>
-    <lastmod>2023-05-02T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/tags/mysql/</loc>
-    <lastmod>2023-05-02T10:00:00-05:00</lastmod>
-  </url><url>
     <loc>https://johnmthompson.github.io/tags/self-service-analytics/</loc>
-    <lastmod>2023-05-02T10:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/tags/</loc>
     <lastmod>2023-05-02T10:00:00-05:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/tags/tutorials/</loc>
@@ -42,9 +54,6 @@
     <lastmod>2023-04-08T14:17:00-05:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/tags/devops/</loc>
-    <lastmod>2022-12-29T20:55:00-06:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/tags/linux/</loc>
     <lastmod>2022-12-29T20:55:00-06:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/posts/year-in-review-2022/</loc>
