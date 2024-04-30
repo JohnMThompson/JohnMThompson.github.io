@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnmthompson.github.io/collaborate/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://johnmthompson.github.io/tags/cron/</loc>
     <lastmod>2024-03-17T00:00:00-05:00</lastmod>
   </url><url>
@@ -61,9 +64,6 @@
   </url><url>
     <loc>https://johnmthompson.github.io/tags/open-source/</loc>
     <lastmod>2022-12-29T20:55:00-06:00</lastmod>
-  </url><url>
-    <loc>https://johnmthompson.github.io/contact/</loc>
-    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://johnmthompson.github.io/</loc>
     <lastmod>2022-12-12T00:00:00+00:00</lastmod>

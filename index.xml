@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://johnmthompson.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://johnmthompson.github.io/collaborate/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://johnmthompson.github.io/collaborate/</guid>
+      
+        <description>collaborate</description>
+      
+    </item>
+    
+    <item>
       <title>Scraping Mortgage Rates Using Python &amp; Metabase</title>
       <link>https://johnmthompson.github.io/posts/mortgage-scraper/</link>
       <pubDate>Sun, 17 Mar 2024 00:00:00 -0500</pubDate>
@@ -77,17 +88,6 @@ I like to get outside and feel the bite of the cold and see my breath hanging in
       
         <description>I made a decision last January to step outside my comfort zone of proprietary low-code tools and start exploring open source projects and tools.
 I wanted to challenge myself to learn the skills I would need to be self-sufficient owning, using, and deploying analytic tools that fit the projects I wanted to complete. This meant using inexpensive or free frameworks. In order to build the skills I would need, and I planned out experiences that would allow me to learn through hands-on and realistic projects.</description>
-      
-    </item>
-    
-    <item>
-      <title>Contact Me</title>
-      <link>https://johnmthompson.github.io/contact/</link>
-      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://johnmthompson.github.io/contact/</guid>
-      
-        <description>Contact Page</description>
       
     </item>
     
