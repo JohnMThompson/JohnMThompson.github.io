@@ -14,7 +14,7 @@
       
       <guid>https://johnmthompson.github.io/posts/mortgage-scraper/</guid>
       
-        <description>My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve find myself looking at rates from local lenders daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.</description>
+        <description>&lt;p&gt;My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve find myself looking at rates from local lenders daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,10 +25,12 @@
       
       <guid>https://johnmthompson.github.io/posts/metabase-actions-tutorial/</guid>
       
-        <description>Overview I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!
-This tutorial will show how to build an app to track swimming workouts using Metabase&amp;rsquo;s new Actions feature. For some general background on Actions, check out my corresponding post to this tutorial.
-Assumptions &amp;amp; Prerequisites Here&amp;rsquo;s what you need to build a dashboard Actions:
-Metabase version 0.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://johnmthompson.github.io/images/posts/metabase-actions/metabase-swim-app.png&#34; alt=&#34;Screenshot of my swimming app&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This tutorial will show how to build an app to track swimming workouts using Metabase&amp;rsquo;s new Actions feature. For some general background on Actions, check out &lt;a href=&#34;https://johnmthompson.github.io/posts/metabase-actions/&#34;&gt;my corresponding post to this tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;assumptions--prerequisites&#34;&gt;Assumptions &amp;amp; Prerequisites&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s what you need to build a dashboard Actions:&lt;/p&gt;</description>
       
     </item>
     

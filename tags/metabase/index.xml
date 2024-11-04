@@ -14,7 +14,7 @@
       
       <guid>https://johnmthompson.github.io/posts/mortgage-scraper/</guid>
       
-        <description>My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve find myself looking at rates from local lenders daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.</description>
+        <description>&lt;p&gt;My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve find myself looking at rates from local lenders daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,10 +25,12 @@
       
       <guid>https://johnmthompson.github.io/posts/metabase-actions-tutorial/</guid>
       
-        <description>Overview I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!
-This tutorial will show how to build an app to track swimming workouts using Metabase&amp;rsquo;s new Actions feature. For some general background on Actions, check out my corresponding post to this tutorial.
-Assumptions &amp;amp; Prerequisites Here&amp;rsquo;s what you need to build a dashboard Actions:
-Metabase version 0.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://johnmthompson.github.io/images/posts/metabase-actions/metabase-swim-app.png&#34; alt=&#34;Screenshot of my swimming app&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This tutorial will show how to build an app to track swimming workouts using Metabase&amp;rsquo;s new Actions feature. For some general background on Actions, check out &lt;a href=&#34;https://johnmthompson.github.io/posts/metabase-actions/&#34;&gt;my corresponding post to this tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;assumptions--prerequisites&#34;&gt;Assumptions &amp;amp; Prerequisites&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s what you need to build a dashboard Actions:&lt;/p&gt;</description>
       
     </item>
     
@@ -39,8 +41,8 @@ Metabase version 0.</description>
       
       <guid>https://johnmthompson.github.io/posts/metabase-actions/</guid>
       
-        <description>I&amp;rsquo;ve been using Metabase for personal projects for the last year or so and love their simple and friendly user experience. As a platform it sets up quickly, you can get up and running in about 10 minutes.
-In Metabase version 0.46, a new feature was released called Actions which enable database write back from Metabase to your database. In my experience this feature is unusual in a BI tool, where most vendors prefer to be the endpoint to an analysis workflow.</description>
+        <description>&lt;p&gt;I&amp;rsquo;ve been using Metabase for personal projects for the last year or so and love their simple and friendly user experience. As a platform it sets up quickly, you can get up and running in about 10 minutes.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&#34;https://www.metabase.com/releases/metabase-46&#34;&gt;Metabase version 0.46&lt;/a&gt;, a new feature was released called Actions which enable database write back from Metabase to your database. In my experience this feature is unusual in a BI tool, where most vendors prefer to be the endpoint to an analysis workflow. There are several use cases I&amp;rsquo;ve come across where a &lt;a href=&#34;https://en.wikipedia.org/wiki/Create,_read,_update_and_delete&#34;&gt;CRUD (Create, Read, Update, Delete)&lt;/a&gt; experience is desired by a user. Viewing analytics and adjusting manual inputs like inventory targets without needing to toggle to another screen simplifies workflows. Pairing analytics closely with business decisions makes for fast and better informed decision making.&lt;/p&gt;</description>
       
     </item>
     
@@ -51,8 +53,8 @@ In Metabase version 0.46, a new feature was released called Actions which enable
       
       <guid>https://johnmthompson.github.io/posts/year-in-review-2022/</guid>
       
-        <description>I made a decision last January to step outside my comfort zone of proprietary low-code tools and start exploring open source projects and tools.
-I wanted to challenge myself to learn the skills I would need to be self-sufficient owning, using, and deploying analytic tools that fit the projects I wanted to complete. This meant using inexpensive or free frameworks. In order to build the skills I would need, and I planned out experiences that would allow me to learn through hands-on and realistic projects.</description>
+        <description>&lt;p&gt;I made a decision last January to step outside my comfort zone of proprietary low-code tools and start exploring open source projects and tools.&lt;/p&gt;
+&lt;p&gt;I wanted to challenge myself to learn the skills I would need to be self-sufficient owning, using, and deploying analytic tools that fit the projects I wanted to complete. This meant using inexpensive or free frameworks. In order to build the skills I would need, and I planned out experiences that would allow me to learn through hands-on and realistic projects.&lt;/p&gt;</description>
       
     </item>
     

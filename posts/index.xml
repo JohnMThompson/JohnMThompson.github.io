@@ -6,7 +6,7 @@
     <description>Recent content in Posts on John Thompson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 -0500</lastBuildDate><atom:link href="https://johnmthompson.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Aug 2024 18:33:20 -0600</lastBuildDate><atom:link href="https://johnmthompson.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scraping Mortgage Rates Using Python &amp; Metabase</title>
       <link>https://johnmthompson.github.io/posts/mortgage-scraper/</link>
@@ -14,7 +14,7 @@
       
       <guid>https://johnmthompson.github.io/posts/mortgage-scraper/</guid>
       
-        <description>My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve find myself looking at rates from local lenders daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.</description>
+        <description>&lt;p&gt;My wife and I have been house hunting for several months, and the mortgage rate market in the United States has been up and down. I&amp;rsquo;ve find myself looking at rates from local lenders daily, navigating to their websites and writing the rates down or mentally taking note of where they are at. It&amp;rsquo;s difficult to see trends and understand if rates are rising or falling over time since, although there are daily fluctuations, meaningful changes take place over weeks or months.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,8 +25,8 @@
       
       <guid>https://johnmthompson.github.io/posts/year-in-review-2023/</guid>
       
-        <description>Last year, I posted my first &amp;ldquo;Year in Review&amp;rdquo; and it was a great way for me to reflect and document some of my new experiences and projects I completed.
-I had fun learning how to optimize apps and sites I created and customize templates &amp;amp; themes others built. I also had my first ever pull request approved for an open source project! Here are some of the highlights from my last year.</description>
+        <description>&lt;p&gt;Last year, I posted my first &amp;ldquo;Year in Review&amp;rdquo; and it was a great way for me to reflect and document some of my new experiences and projects I completed.&lt;/p&gt;
+&lt;p&gt;I had fun learning how to optimize apps and sites I created and customize templates &amp;amp; themes others built. I also had my first ever pull request approved for an open source project! Here are some of the highlights from my last year.&lt;/p&gt;</description>
       
     </item>
     
@@ -37,10 +37,12 @@ I had fun learning how to optimize apps and sites I created and customize templa
       
       <guid>https://johnmthompson.github.io/posts/metabase-actions-tutorial/</guid>
       
-        <description>Overview I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!
-This tutorial will show how to build an app to track swimming workouts using Metabase&amp;rsquo;s new Actions feature. For some general background on Actions, check out my corresponding post to this tutorial.
-Assumptions &amp;amp; Prerequisites Here&amp;rsquo;s what you need to build a dashboard Actions:
-Metabase version 0.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I started lap swimming this year and once I discovered Metabase Actions I thought it was the perfect way to track my workouts!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://johnmthompson.github.io/images/posts/metabase-actions/metabase-swim-app.png&#34; alt=&#34;Screenshot of my swimming app&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This tutorial will show how to build an app to track swimming workouts using Metabase&amp;rsquo;s new Actions feature. For some general background on Actions, check out &lt;a href=&#34;https://johnmthompson.github.io/posts/metabase-actions/&#34;&gt;my corresponding post to this tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;assumptions--prerequisites&#34;&gt;Assumptions &amp;amp; Prerequisites&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s what you need to build a dashboard Actions:&lt;/p&gt;</description>
       
     </item>
     
@@ -51,8 +53,8 @@ Metabase version 0.</description>
       
       <guid>https://johnmthompson.github.io/posts/metabase-actions/</guid>
       
-        <description>I&amp;rsquo;ve been using Metabase for personal projects for the last year or so and love their simple and friendly user experience. As a platform it sets up quickly, you can get up and running in about 10 minutes.
-In Metabase version 0.46, a new feature was released called Actions which enable database write back from Metabase to your database. In my experience this feature is unusual in a BI tool, where most vendors prefer to be the endpoint to an analysis workflow.</description>
+        <description>&lt;p&gt;I&amp;rsquo;ve been using Metabase for personal projects for the last year or so and love their simple and friendly user experience. As a platform it sets up quickly, you can get up and running in about 10 minutes.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&#34;https://www.metabase.com/releases/metabase-46&#34;&gt;Metabase version 0.46&lt;/a&gt;, a new feature was released called Actions which enable database write back from Metabase to your database. In my experience this feature is unusual in a BI tool, where most vendors prefer to be the endpoint to an analysis workflow. There are several use cases I&amp;rsquo;ve come across where a &lt;a href=&#34;https://en.wikipedia.org/wiki/Create,_read,_update_and_delete&#34;&gt;CRUD (Create, Read, Update, Delete)&lt;/a&gt; experience is desired by a user. Viewing analytics and adjusting manual inputs like inventory targets without needing to toggle to another screen simplifies workflows. Pairing analytics closely with business decisions makes for fast and better informed decision making.&lt;/p&gt;</description>
       
     </item>
     
@@ -63,8 +65,9 @@ In Metabase version 0.46, a new feature was released called Actions which enable
       
       <guid>https://johnmthompson.github.io/posts/comfortable-being-uncomfortable/</guid>
       
-        <description>For 35 of my 37 years on this planet, I&amp;rsquo;ve lived in the state of Minnesota. Notorious for its cold winters, I&amp;rsquo;ve grown a certain affinity for the discomfort January and February bring. With a record low of -32°F (-35.6°C) in my lifetime1, I&amp;rsquo;ve had a lot of cold weather experience.
-I like to get outside and feel the bite of the cold and see my breath hanging in the air, for me it&amp;rsquo;s an invigorating experience!</description>
+        <description>&lt;p&gt;For 35 of my 37 years on this planet, I&amp;rsquo;ve lived in the state of &lt;a href=&#34;https://en.wikipedia.org/wiki/Minnesota&#34;&gt;Minnesota&lt;/a&gt;. Notorious for its cold winters, I&amp;rsquo;ve grown a certain affinity for the discomfort January and February bring. With a record low of -32°F (-35.6°C) in my lifetime&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, I&amp;rsquo;ve had a lot of cold weather experience.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://johnmthompson.github.io/images/posts/202201/coldweather.png&#34; alt=&#34;The author standing outside with ice on his eyelashes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I like to get outside and feel the bite of the cold and see my breath hanging in the air, for me it&amp;rsquo;s an invigorating experience! Some days, I endure the cold by driving to the store to pick up dinner or more wood for the fire. Other days, I want to embrace the cold by putting on my biggest coat and warmest boots and head out for a walk across a frozen lake.&lt;/p&gt;</description>
       
     </item>
     
@@ -75,8 +78,8 @@ I like to get outside and feel the bite of the cold and see my breath hanging in
       
       <guid>https://johnmthompson.github.io/posts/year-in-review-2022/</guid>
       
-        <description>I made a decision last January to step outside my comfort zone of proprietary low-code tools and start exploring open source projects and tools.
-I wanted to challenge myself to learn the skills I would need to be self-sufficient owning, using, and deploying analytic tools that fit the projects I wanted to complete. This meant using inexpensive or free frameworks. In order to build the skills I would need, and I planned out experiences that would allow me to learn through hands-on and realistic projects.</description>
+        <description>&lt;p&gt;I made a decision last January to step outside my comfort zone of proprietary low-code tools and start exploring open source projects and tools.&lt;/p&gt;
+&lt;p&gt;I wanted to challenge myself to learn the skills I would need to be self-sufficient owning, using, and deploying analytic tools that fit the projects I wanted to complete. This meant using inexpensive or free frameworks. In order to build the skills I would need, and I planned out experiences that would allow me to learn through hands-on and realistic projects.&lt;/p&gt;</description>
       
     </item>
     
