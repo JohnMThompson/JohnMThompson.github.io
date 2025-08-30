@@ -6,7 +6,19 @@
     <description>Recent content in Posts on John Thompson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Nov 2024 20:27:47 -0600</lastBuildDate><atom:link href="https://johnmthompson.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Aug 2025 09:00:00 -0500</lastBuildDate><atom:link href="https://johnmthompson.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What I Learned Migrating Metabase to Postgres</title>
+      <link>https://johnmthompson.github.io/posts/metabase-migration/</link>
+      <pubDate>Sat, 30 Aug 2025 09:00:00 -0500</pubDate>
+      
+      <guid>https://johnmthompson.github.io/posts/metabase-migration/</guid>
+      
+        <description>&lt;p&gt;Since 2022, I&amp;rsquo;ve maintained a deployment of Metabase for hobby projects. It&amp;rsquo;s been a key part of learning new skills and showcasing projects.&lt;/p&gt;
+&lt;p&gt;Over the last 3 years, my Metabase deployment has stayed simple - utilizing the default H2 database that ships with the product. Even though the documentation recommends moving off H2 for stability, I stuck with it while I learned the tool. If felt like the right time to move to the recommended database before my portfolio was at risk.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Scraping Mortgage Rates Using Python &amp; Metabase</title>
       <link>https://johnmthompson.github.io/posts/mortgage-scraper/</link>
