@@ -203,7 +203,7 @@
 
     ,
         "url" : "https:\/\/johnmthompson.github.io\/posts\/mortgage-scraper\/",
-        "wordCount" : "1128",
+        "wordCount" : "1149",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -555,8 +555,9 @@
 <pre tabindex="0"><code class="language-cron" data-lang="cron">0 18 * * 1-5 /usr/bin/python3 /root/mortgage-rate-scraper/script.py
 </code></pre><p>I&rsquo;m going to do some more research on handling time zones and daylight savings time adjustments when using cron so I don&rsquo;t need to keep adjusting twice per year. Overall, I am really happy with this approach, and it&rsquo;s vastly superior to my previous never ending loop method!</p>
 <h2 id="viewing-the-results">Viewing the Results</h2>
+<p><em>Disclaimer: I retired Metabase in April of 2026. This blog was edited to remove dead links and redirect to new solutions.</em></p>
 <p>The last step in this project was to create a user facing dashboard where I could see today&rsquo;s rates and a simple trend of rates over time. For most of my personal projects, I like to use Metabase for this kind of reporting. It&rsquo;s simple to configure, lightweight, and open source. Metabase also offers an embedding option that I&rsquo;m going to try out for the first time in this post!</p>
-<iframe src="https://metabase.corvidanalytics.com/public/dashboard/8eef25a5-d8a4-4033-96e6-b828af13b025" frameborder = "0" width = "800" height="600" allowtransparency></iframe>
+<iframe src="https://analytics.johnthompson.io/dashboard/mortgage_rates" frameborder = "0" width = "800" height="600" allowtransparency></iframe>
 <p>Here&rsquo;s a link to the <a href="https://github.com/JohnMThompson/mortgage-rate-scraper">GitHub repository for this project</a> if you want to check out the full Python code!</p>
 </div>
     <div class="post__footer">
