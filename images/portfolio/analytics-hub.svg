@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Analytics and Reporting Hub preview</title>
+  <desc id="desc">A stylized dashboard grid with five analytics cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e6edf6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <rect x="62" y="52" width="1076" height="90" rx="24" fill="#fff" stroke="#dbe5f0"/>
+  <text x="104" y="96" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700">Analytics and Reporting Hub</text>
+  <text x="104" y="122" fill="#64748b" font-family="Segoe UI, sans-serif" font-size="17">Choose a dashboard to view</text>
+  <g filter="url(#shadow)">
+    <g transform="translate(62 182)">
+      <rect width="330" height="192" rx="20" fill="#fff" stroke="#dbe5f0"/>
+      <rect width="330" height="7" rx="4" fill="#16a34a"/>
+      <path d="M38 118C80 92 104 128 145 84s77 25 145-29" fill="none" stroke="#16a34a" stroke-width="8" stroke-linecap="round"/>
+      <text x="38" y="164" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Mortgage Rates</text>
+    </g>
+    <g transform="translate(435 182)">
+      <rect width="330" height="192" rx="20" fill="#fff" stroke="#dbe5f0"/>
+      <rect width="330" height="7" rx="4" fill="#2563eb"/>
+      <rect x="42" y="63" width="44" height="69" rx="8" fill="#dbeafe"/>
+      <rect x="105" y="42" width="44" height="90" rx="8" fill="#93c5fd"/>
+      <rect x="168" y="78" width="44" height="54" rx="8" fill="#60a5fa"/>
+      <rect x="231" y="28" width="44" height="104" rx="8" fill="#2563eb"/>
+      <text x="38" y="164" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Swim Tracking</text>
+    </g>
+    <g transform="translate(808 182)">
+      <rect width="330" height="192" rx="20" fill="#fff" stroke="#dbe5f0"/>
+      <rect width="330" height="7" rx="4" fill="#00aeef"/>
+      <circle cx="165" cy="85" r="55" fill="#eff9ff"/>
+      <path d="M165 85L165 30A55 55 0 0 1 214 110Z" fill="#00aeef"/>
+      <path d="M165 85L214 110A55 55 0 0 1 125 123Z" fill="#38bdf8"/>
+      <text x="38" y="164" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Concert Calendar</text>
+    </g>
+    <g transform="translate(249 414)">
+      <rect width="330" height="192" rx="20" fill="#fff" stroke="#dbe5f0"/>
+      <rect width="330" height="7" rx="4" fill="#ea580c"/>
+      <text x="42" y="86" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="54" font-weight="750">1,247</text>
+      <text x="42" y="117" fill="#64748b" font-family="Segoe UI, sans-serif" font-size="18">trick-or-treaters tracked</text>
+      <text x="38" y="164" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Halloween</text>
+    </g>
+    <g transform="translate(622 414)">
+      <rect width="330" height="192" rx="20" fill="#fff" stroke="#dbe5f0"/>
+      <rect width="330" height="7" rx="4" fill="#7c3aed"/>
+      <text x="42" y="88" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="54" font-weight="750">72.4°</text>
+      <text x="42" y="117" fill="#64748b" font-family="Segoe UI, sans-serif" font-size="18">current office temperature</text>
+      <text x="38" y="164" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Office Climate</text>
+    </g>
+  </g>
+</svg>

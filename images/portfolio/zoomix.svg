@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Zoomix screen tools</title>
+  <desc id="desc">A magnifying glass, annotation arrow, and toolbar over a Linux desktop window.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0f172a" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <text x="72" y="82" fill="#dc2626" font-family="Segoe UI, sans-serif" font-size="25" font-weight="800" letter-spacing="4">SCREEN TOOLS</text>
+  <g filter="url(#shadow)">
+    <rect x="84" y="132" width="1032" height="510" rx="32" fill="#172033"/>
+    <path d="M116 132h968a32 32 0 0 1 32 32v42H84v-42a32 32 0 0 1 32-32Z" fill="#263247"/>
+    <circle cx="130" cy="169" r="10" fill="#f87171"/>
+    <circle cx="162" cy="169" r="10" fill="#fbbf24"/>
+    <circle cx="194" cy="169" r="10" fill="#4ade80"/>
+    <rect x="132" y="248" width="438" height="320" rx="22" fill="#f8fafc"/>
+    <path d="m164 500 88-92 66 52 96-128 124 168Z" fill="#bfdbfe"/>
+    <circle cx="242" cy="326" r="38" fill="#fbbf24"/>
+    <circle cx="652" cy="384" r="142" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-width="14"/>
+    <circle cx="652" cy="384" r="82" fill="none" stroke="#fff" stroke-width="7" stroke-dasharray="14 14"/>
+    <path d="m754 486 88 88" stroke="#fff" stroke-width="28" stroke-linecap="round"/>
+    <path d="M864 274c74 6 130 50 160 120" fill="none" stroke="#dc2626" stroke-width="19" stroke-linecap="round"/>
+    <path d="m1002 354 28 50-56-4" fill="#dc2626"/>
+    <rect x="856" y="466" width="194" height="76" rx="18" fill="#fff"/>
+    <circle cx="894" cy="504" r="14" fill="#dc2626"/>
+    <rect x="924" y="490" width="94" height="12" rx="6" fill="#94a3b8"/>
+    <rect x="924" y="514" width="64" height="11" rx="6" fill="#cbd5e1"/>
+  </g>
+</svg>

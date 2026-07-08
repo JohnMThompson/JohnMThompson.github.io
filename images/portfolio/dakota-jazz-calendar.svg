@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Dakota Jazz Calendar</title>
+  <desc id="desc">A calendar of jazz performances flowing into a structured event table.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#d9f1ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#background)"/>
+  <text x="72" y="86" fill="#0076a3" font-family="Segoe UI, sans-serif" font-size="24" font-weight="800" letter-spacing="3">EVENT PIPELINE</text>
+  <text x="72" y="132" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="38" font-weight="750">Dakota Jazz Calendar</text>
+  <g filter="url(#shadow)">
+    <rect x="78" y="178" width="430" height="390" rx="28" fill="#fff" stroke="#bfe5f7"/>
+    <rect x="78" y="178" width="430" height="76" rx="28" fill="#00aeef"/>
+    <text x="112" y="226" fill="#fff" font-family="Segoe UI, sans-serif" font-size="25" font-weight="750">MARCH 2026</text>
+    <g font-family="Segoe UI, sans-serif" text-anchor="middle">
+      <g fill="#64748b" font-size="15" font-weight="700">
+        <text x="126" y="292">SUN</text><text x="184" y="292">MON</text><text x="242" y="292">TUE</text>
+        <text x="300" y="292">WED</text><text x="358" y="292">THU</text><text x="416" y="292">FRI</text><text x="474" y="292">SAT</text>
+      </g>
+      <g fill="#334155" font-size="18">
+        <text x="126" y="336">1</text><text x="184" y="336">2</text><text x="242" y="336">3</text>
+        <text x="300" y="336">4</text><text x="358" y="336">5</text><text x="416" y="336">6</text><text x="474" y="336">7</text>
+        <text x="126" y="388">8</text><text x="184" y="388">9</text><text x="242" y="388">10</text>
+        <text x="300" y="388">11</text><text x="358" y="388">12</text><text x="416" y="388">13</text><text x="474" y="388">14</text>
+        <text x="126" y="440">15</text><text x="184" y="440">16</text><text x="242" y="440">17</text>
+        <text x="300" y="440">18</text><text x="358" y="440">19</text><text x="416" y="440">20</text><text x="474" y="440">21</text>
+        <text x="126" y="492">22</text><text x="184" y="492">23</text><text x="242" y="492">24</text>
+        <text x="300" y="492">25</text><text x="358" y="492">26</text><text x="416" y="492">27</text><text x="474" y="492">28</text>
+      </g>
+    </g>
+    <circle cx="300" cy="382" r="22" fill="#00aeef"/>
+    <text x="300" y="389" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800">11</text>
+    <circle cx="416" cy="434" r="22" fill="#0094cc"/>
+    <text x="416" y="441" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800">20</text>
+
+    <path d="M536 372h88m-24-24 28 24-28 24" fill="none" stroke="#0094cc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="660" y="178" width="462" height="390" rx="28" fill="#fff" stroke="#bfe5f7"/>
+    <text x="700" y="226" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="25" font-weight="750">Upcoming performances</text>
+    <g font-family="Segoe UI, sans-serif">
+      <g transform="translate(700 270)">
+        <rect width="382" height="76" rx="14" fill="#eff9ff"/>
+        <rect width="7" height="76" rx="4" fill="#00aeef"/>
+        <text x="28" y="31" fill="#0f172a" font-size="19" font-weight="750">The New Standards</text>
+        <text x="28" y="56" fill="#64748b" font-size="15">Mar 11 · 6:00 PM, 8:30 PM</text>
+      </g>
+      <g transform="translate(700 366)">
+        <rect width="382" height="76" rx="14" fill="#eff9ff"/>
+        <rect width="7" height="76" rx="4" fill="#0094cc"/>
+        <text x="28" y="31" fill="#0f172a" font-size="19" font-weight="750">JazzMN Orchestra</text>
+        <text x="28" y="56" fill="#64748b" font-size="15">Mar 20 · 7:00 PM</text>
+      </g>
+      <g transform="translate(700 462)">
+        <rect width="382" height="76" rx="14" fill="#eff9ff"/>
+        <rect width="7" height="76" rx="4" fill="#0076a3"/>
+        <text x="28" y="31" fill="#0f172a" font-size="19" font-weight="750">Late Night Jazz</text>
+        <text x="28" y="56" fill="#64748b" font-size="15">Mar 27 · 9:30 PM</text>
+      </g>
+    </g>
+  </g>
+</svg>
